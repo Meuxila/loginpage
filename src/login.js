@@ -21,11 +21,11 @@ class Login extends Component {
             <Typography>
               Login
               </Typography>
-            <Grid item xs={12} sm={10} lg={10} xl={10} container direction='column' justify='space-between' alignItems='center'>
+            <Grid container direction='column' justify='center' margin= '40px' alignContent='center'>
               <TextField
                 id="userName"
-                label="User Name"
-                placeholder="userName"
+                label="Username"
+                placeholder="Enter your Username"
                 margin="normal"
                 variant="outlined"
               />
@@ -34,15 +34,17 @@ class Login extends Component {
                 id="passwordInput"
                 label="Password"
                 type="password"
+                placeholder="Enter your password"
                 autoComplete="current-password"
                 margin="normal"
                 variant="outlined"
               />
 
-              <Button
+              <Button className = "summitButton"
                 type="submit"
                 fullWidth variant="contained"
                 color="primary"
+                style = {{marginBottom: 70}}
               >
                 Sign in
               </Button>
