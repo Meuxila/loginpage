@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #c2e0bb;
+  background-color: #83b0ca;
 
 }
 
@@ -10,4 +10,7 @@
 
 #Button {
   background-color: aliceblue;
+}
+.grow{
+  flex-grow: 1;
 }
