@@ -22,7 +22,7 @@ class Login extends Component {
               Login
               </Typography>
             <Grid container direction='column' justify='center' margin= '40px' alignContent='center'>
-              <TextField
+              <TextField className = "userNameField"
                 id="userName"
                 label="Username"
                 placeholder="Enter your Username"
@@ -30,7 +30,7 @@ class Login extends Component {
                 variant="outlined"
               />
 
-              <TextField
+              <TextField className = "passwordField"
                 id="passwordInput"
                 label="Password"
                 type="password"
@@ -44,12 +44,13 @@ class Login extends Component {
                 type="submit"
                 fullWidth variant="contained"
                 color="primary"
+                size = "small"
                 style = {{marginBottom: 70}}
               >
                 Sign in
               </Button>
 
-              <Typography>
+              <Typography className = 'registerTypo'>
                 Not registered yet?
               </Typography>
               <Button
@@ -58,7 +59,7 @@ class Login extends Component {
                 color="primary"
               >
                 Register
-      </Button>
+              </Button>
             </Grid>
           </CardContent>
         </Card>
