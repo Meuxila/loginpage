@@ -13,9 +13,10 @@ import './Login.css';
 
 class Login extends Component {
   state = {
-    username: "",
-    password: ""
+    username: '',
+    password: ''
   }
+  
   render() {
     return (
       <div className="loginWindow">
@@ -63,19 +64,21 @@ class Login extends Component {
               </Grid>
               </div>
               <Grid container direction='column' justify='center' margin='40px' alignContent='center'>
-                <Typography className='registerTypo'>
-                  Login with
-              </Typography>
-                <Button className="GoogleButton"
-                  variant="contained" size="small" style={{ marginBottom: 10 }}>
-                  {/* <img src="../../images/facebookIcon.png"></img> */}
-                  <p>Google</p>
+
+                <Button  className="summitButton"
+                  type="submit"
+                  fullWidth variant="contained" 
+                  size="medium" 
+                  style={{ marginBottom: 10 }}>
+                  Login with Google
                 </Button>
 
-                <Button className="facebookButton"
-                  variant="contained" size="small" style={{ marginBottom: 30 }}>
-                  {/* <img src="/images/facebookIcon.png" alt ="FB "></img> */}
-                  <p>Facebook</p>
+                <Button className="summitButton"
+                  type="submit"
+                  fullWidth variant="contained"
+                  size="medium" 
+                  style={{ marginBottom: 30 }}>
+                  login with Facebook
                 </Button>
 
                 <Typography className='registerTypo'>

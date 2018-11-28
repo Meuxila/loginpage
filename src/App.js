@@ -25,7 +25,7 @@ class App extends Component {
          DE
         </Button>
         <Button id = "Button" variant="outlined" size="small" color="primary">
-         SW
+         SV
         </Button>
         </div>
         </Toolbar>
