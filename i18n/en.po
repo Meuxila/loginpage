@@ -11,8 +11,8 @@ msgid "Login"
 msgstr "Login"
 
 #: src/login.js:34
-msgid "userName"
-msgstr "userName"
+msgid "username"
+msgstr "Username"
 
 #: src/login.js:36
 msgid "Enter your Username"

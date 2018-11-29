@@ -5,20 +5,34 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import './App.css';
 import Login from './login';
-import {saveLocale} from './i18nInit';
+import { saveLocale } from './i18nInit';
 
-
+//PO works with locale = language
 const setLocale = (locale) => (ev) => {
   ev.preventDefault();
   saveLocale(locale);
   window.location.reload();
 }
 
-const LaguageSwitcher = () => (
-  <div className="Language-switch">
-    <a href='/' onClick={setLocale('de')}>de</a>
-  </div>
-)
+const LanguageSwitcher = () => {
+  return (
+    <div className="Language-switch">
+
+      <Button id="Button" variant="outlined" size="small" color="primary"
+        onClick={setLocale('en')}>
+        EN
+      </Button>
+      <Button id="Button" variant="outlined" size="small" color="primary"
+        onClick={setLocale('de')}>
+        DE
+      </Button>
+      <Button id="Button" variant="outlined" size="small" color="primary"
+        onClick={setLocale('sv')}>
+        SV
+      </Button>
+    </div>
+  )
+}
 
 
 
@@ -30,16 +44,8 @@ class App extends Component {
           <Toolbar>
             <div className="grow"></div>
             <div className="languageButtons">
-            <LaguageSwitcher />
-              <Button id="Button" variant="outlined" size="small" color="primary">
-                EN
-        </Button>
-              <Button id="Button" variant="outlined" size="small" color="primary">
-                DE
-        </Button>
-              <Button id="Button" variant="outlined" size="small" color="primary">
-                SV
-        </Button>
+              <LanguageSwitcher />
+
             </div>
           </Toolbar>
         </AppBar>

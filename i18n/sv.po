@@ -11,7 +11,7 @@ msgid "Login"
 msgstr "Logga in"
 
 #: src/login.js:34
-msgid "userName"
+msgid "username"
 msgstr "Användarnamn"
 
 #: src/login.js:36

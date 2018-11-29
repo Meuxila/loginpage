@@ -8,10 +8,9 @@ import Card from '@material-ui/core/Card';
 import { CardContent, Grid } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 
-import {t, jt} from 'ttag';
+import {t} from 'ttag';
 
 import './Login.css';
-import { TransitionGroup } from 'react-transition-group';
 
 
 class Login extends Component {
@@ -31,8 +30,8 @@ class Login extends Component {
             <div className="box">
               <Grid container direction='column' justify='center' margin='40px' alignContent='center'>
                 <TextField className="userNameField"
-                  id={t`username`}
-                  label="Username"
+                  id="username"
+                  label={t`username`}
                   placeholder={t`Enter your Username`}
                   margin="normal"
                   variant="outlined"
