@@ -8,7 +8,10 @@ import Card from '@material-ui/core/Card';
 import { CardContent, Grid } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 
+import {t, jt} from 'ttag';
+
 import './Login.css';
+import { TransitionGroup } from 'react-transition-group';
 
 
 class Login extends Component {
@@ -23,14 +26,14 @@ class Login extends Component {
         <Card>
           <CardContent>
             <Typography>
-              Login
+              {t`Login`}
               </Typography>
             <div className="box">
               <Grid container direction='column' justify='center' margin='40px' alignContent='center'>
                 <TextField className="userNameField"
-                  id="userName"
+                  id={t`username`}
                   label="Username"
-                  placeholder="Enter your Username"
+                  placeholder={t`Enter your Username`}
                   margin="normal"
                   variant="outlined"
                   onChange={(event, newValue) =>
@@ -39,9 +42,9 @@ class Login extends Component {
                 />
                 <TextField className="passwordField"
                   id="passwordInput"
-                  label="Password"
+                  label={t`Password`}
                   type="password"
-                  placeholder="Enter your password"
+                  placeholder={t`Enter your password`}
                   autoComplete="current-password"
                   margin="normal"
                   variant="outlined"
@@ -58,38 +61,40 @@ class Login extends Component {
                   style={{ marginBottom: 50 }}
                   onClick={(event) => this.handleSummit(event)}
                 >
-                  Sign in
+                  {t`Sign in`}
               </Button>
 
               </Grid>
               </div>
               <Grid container direction='column' justify='center' margin='40px' alignContent='center'>
 
-                <Button  className="summitButton"
+                <Button  className="GoButton"
                   type="submit"
                   fullWidth variant="contained" 
                   size="medium" 
                   style={{ marginBottom: 10 }}>
-                  Login with Google
+                  {t`Login with Google`}
                 </Button>
 
-                <Button className="summitButton"
+                <Button className="FbButton"
                   type="submit"
                   fullWidth variant="contained"
                   size="medium" 
-                  style={{ marginBottom: 30 }}>
-                  login with Facebook
+                  style={{ marginBottom: 30 }}
+                  /* onClick={(event) => } */
+                  >
+                  {t`Login with Facebook`}
                 </Button>
 
                 <Typography className='registerTypo'>
-                  Not registered yet?
+                  {t`Not registered yet?`}
               </Typography>
                 <Button
                   type="submit"
                   fullWidth variant="contained"
                   color="primary"
                 >
-                  Register
+                  {t`Register`}
               </Button>
               </Grid>
             

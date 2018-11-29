@@ -1,0 +1,47 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Plural-Forms: nplurals = 2; plural = (n !== 1);\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/login.js:29
+msgid "Login"
+msgstr "Login"
+
+#: src/login.js:34
+msgid "username"
+msgstr "Nutzername"
+
+#: src/login.js:36
+msgid "Enter your Username"
+msgstr "Geben Sie Ihren Nutzernamen ein"
+
+#: src/login.js:45
+msgid "Password"
+msgstr "Passwort"
+
+#: src/login.js:47
+msgid "Enter your password"
+msgstr "Geben Sie Ihr Passwort ein"
+
+#: src/login.js:64
+msgid "Sign in"
+msgstr "einloggen"
+
+#: src/login.js:76
+msgid "Login with Google"
+msgstr "Login mit Google"
+
+#: src/login.js:86
+msgid "login with Facebook"
+msgstr "Login mit Facebook"
+
+#: src/login.js:90
+msgid "Not registered yet?"
+msgstr "Noch nicht registriert"
+
+#: src/login.js:97
+msgid "Register"
+msgstr "Register"
