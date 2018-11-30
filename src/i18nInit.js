@@ -1,6 +1,8 @@
 import { addLocale, useLocale } from 'ttag';
 import * as cookie from './cookie';
 
+
+//po works with locale = language
 const LOCALE_COOKIE = '__locale';
 
 function getLocale() {

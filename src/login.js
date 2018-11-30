@@ -58,7 +58,8 @@ class Login extends Component {
                   color="primary"
                   size="medium"
                   style={{ marginBottom: 50 }}
-                  onClick={(event) => this.handleSummit(event)}
+                  //onClick = {console.log("Login Service temporaly out of order")}
+                  //onClick={(event) => this.handleSummit(event)}
                 >
                   {t`Sign in`}
               </Button>
@@ -67,23 +68,14 @@ class Login extends Component {
               </div>
               <Grid container direction='column' justify='center' margin='40px' alignContent='center'>
 
-                <Button  className="GoButton"
-                  type="submit"
-                  fullWidth variant="contained" 
-                  size="medium" 
-                  style={{ marginBottom: 10 }}>
+                <button  className="GoButton">
+               
                   {t`Login with Google`}
-                </Button>
+                </button>
 
-                <Button className="FbButton"
-                  type="submit"
-                  fullWidth variant="contained"
-                  size="medium" 
-                  style={{ marginBottom: 30 }}
-                  /* onClick={(event) => } */
-                  >
+                <button className="FbButton">
                   {t`Login with Facebook`}
-                </Button>
+                </button>
 
                 <Typography className='registerTypo'>
                   {t`Not registered yet?`}
@@ -100,17 +92,6 @@ class Login extends Component {
           </CardContent>
         </Card>
 
-
-
-
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-
-        </a>
       </div>
 
     );

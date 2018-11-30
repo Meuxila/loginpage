@@ -45,11 +45,13 @@ class App extends Component {
             <div className="grow"></div>
             <div className="languageButtons">
               <LanguageSwitcher />
-
             </div>
           </Toolbar>
         </AppBar>
-        <Login />
+        <div>
+        <Login /> 
+        </div>
+       
       </div>
 
     );

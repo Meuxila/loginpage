@@ -1,15 +1,42 @@
 .loginWindow{
   background-color: #83b0ca;
-    min-height: 100vh;
-   display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  margin: auto;
   }
+ .GoButton {
+   height: 30px;
+   font-size: 12px;
+ }
+ .FbButton {
+  height: 30px;
+  font-size: 12px;
+  margin-bottom: 50px;
+}
 
 /* .box{
   border-bottom-width: thick;
 } */
 
-
+@media (min-width: 1000px) and (min-height: 700px) {
+  .loginWindow{
+    width: 700px;
+    height: 600px;
+  }
+}
+@media (min-width: 500px) and (min-height: 401px) {
+  .loginWindow{
+    width: 450px;
+    height: 400px;
+  }
+}
+@media (min-width: 500px) and (min-height: 400) {
+  .loginWindow{
+    width: 350px;
+    height: 300px;
+  }
+}
