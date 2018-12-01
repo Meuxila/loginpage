@@ -29,26 +29,22 @@ class Login extends Component {
               </Typography>
             <div className="box">
               <Grid container direction='column' justify='center' margin='40px' alignContent='center'>
-                <TextField className="userNameField"
-                  id="username"
-                  label={t`username`}
+                <TextField className="userNameField" id="username"
+                  label={t`Username`}
                   placeholder={t`Enter your Username`}
                   margin="normal"
                   variant="outlined"
-                  onChange={(event, newValue) =>
-                    this.setState({ username: newValue })
+                  onChange={(event, newValue) => this.setState({ username: newValue })
                   }
                 />
-                <TextField className="passwordField"
-                  id="passwordInput"
+                <TextField className="passwordField" id="passwordInput"
                   label={t`Password`}
                   type="password"
                   placeholder={t`Enter your password`}
                   autoComplete="current-password"
                   margin="normal"
                   variant="outlined"
-                  onChange={(event, newValue) =>
-                    this.setState({ password: newValue })
+                  onChange={(event, newValue) => this.setState({ password: newValue })
                   }
                 />
 
@@ -58,8 +54,7 @@ class Login extends Component {
                   color="primary"
                   size="medium"
                   style={{ marginBottom: 50 }}
-                  //onClick = {console.log("Login Service temporaly out of order")}
-                  //onClick={(event) => this.handleSummit(event)}
+                  onClick = {() => alert("Login Service temporarily out of order")}
                 >
                   {t`Sign in`}
               </Button>
@@ -69,7 +64,6 @@ class Login extends Component {
               <Grid container direction='column' justify='center' margin='40px' alignContent='center'>
 
                 <button  className="GoButton">
-               
                   {t`Login with Google`}
                 </button>
 
@@ -79,12 +73,13 @@ class Login extends Component {
 
                 <Typography className='registerTypo'>
                   {t`Not registered yet?`}
-              </Typography>
+                </Typography>
+
                 <Button
                   type="submit"
                   fullWidth variant="contained"
                   color="primary"
-                >
+                  onClick = {() => alert("Register Service temporarily out of order")}>
                   {t`Register`}
               </Button>
               </Grid>

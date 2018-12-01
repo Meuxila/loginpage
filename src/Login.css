@@ -11,6 +11,8 @@
  .GoButton {
    height: 30px;
    font-size: 12px;
+   margin-bottom: 5px;
+   
  }
  .FbButton {
   height: 30px;
