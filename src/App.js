@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 //import logo from './logo.svg';
+import './App.css';
+
 import Button from '@material-ui/core/Button';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import './App.css';
-import Login from './login';
 import { saveLocale } from './i18nInit';
+
+import Login from './login';
+import Register from './register';
+import GoolgeLogin from './gooLogin';
+
 
 //PO works with locale = language
 const setLocale = (locale) => (ev) => {
@@ -49,7 +54,9 @@ class App extends Component {
           </Toolbar>
         </AppBar>
         <div>
-        <Login /> 
+       {/*  <Login /> */}
+        {/* <Register/> */}
+<GoolgeLogin/>
         </div>
        
       </div>

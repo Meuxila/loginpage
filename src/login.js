@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-//import logo from './logo.svg';
+
 import './App.css';
+import './login.css';
 
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
@@ -10,8 +11,12 @@ import Typography from '@material-ui/core/Typography';
 
 import {t} from 'ttag';
 
-import './Login.css';
 
+
+/* const isLogged = () => {
+  return (console.log("Logged"))
+}
+ */
 
 class Login extends Component {
   state = {

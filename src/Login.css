@@ -20,9 +20,6 @@
   margin-bottom: 50px;
 }
 
-/* .box{
-  border-bottom-width: thick;
-} */
 
 @media (min-width: 1000px) and (min-height: 700px) {
   .loginWindow{

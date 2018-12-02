@@ -1,0 +1,29 @@
+.registerWindow{
+  background-color:white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  margin: auto;
+  }
+
+  @media (min-width: 1000px) and (min-height: 700px) {
+    .registerWindow{
+      width: 700px;
+      height: 600px;
+    }
+  }
+  @media (min-width: 500px) and (min-height: 401px) {
+    .registerWindow{
+      width: 450px;
+      height: 400px;
+    }
+  }
+  @media (min-width: 500px) and (min-height: 400) {
+    .registerWindow{
+      width: 350px;
+      height: 300px;
+    }
+  }
