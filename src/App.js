@@ -54,9 +54,9 @@ class App extends Component {
           </Toolbar>
         </AppBar>
         <div>
-       {/*  <Login /> */}
+       <Login />
         {/* <Register/> */}
-<GoolgeLogin/>
+{/* <GoolgeLogin/> */}
         </div>
        
       </div>
