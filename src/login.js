@@ -71,13 +71,13 @@ class Login extends Component {
             </div>
             <Grid container direction='column' justify='center' margin='40px' alignContent='center'>
 
-              <button className="GoButton">
+              <Button className="GoButton" variant="outlined" style= {{marginBottom: 5}}>
                 {t`Login with Google`}
-              </button>
+              </Button>
 
-              <button className="FbButton">
+              <Button className="FbButton" variant="outlined" style= {{marginBottom: 20}}>
                 {t`Login with Facebook`}
-              </button>
+              </Button>
 
               <Typography className='registerTypo'>
                 {t`Not registered yet?`}
@@ -100,5 +100,6 @@ class Login extends Component {
     );
   }
 }
+
 
 export default Login;
