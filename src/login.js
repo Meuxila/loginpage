@@ -9,7 +9,7 @@ import Card from '@material-ui/core/Card';
 import { CardContent, Grid } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 
-import {t} from 'ttag';
+import { t } from 'ttag';
 
 
 
@@ -23,15 +23,15 @@ class Login extends Component {
     username: '',
     password: ''
   }
-  
+
   render() {
     return (
       <div className="loginWindow">
-        <Card>
+        <Card className = "loginCard">
           <CardContent>
             <Typography>
               {t`Login`}
-              </Typography>
+            </Typography>
             <div className="box">
               <Grid container direction='column' justify='center' margin='40px' alignContent='center'>
                 <TextField className="userNameField" id="username"
@@ -58,37 +58,40 @@ class Login extends Component {
                   fullWidth variant="contained"
                   color="primary"
                   size="medium"
-                  style={{ marginBottom: 50 }}
-                  onClick = {() => alert("Login Service temporarily out of order")}
+
+                  onClick={() => alert("Login Service temporarily out of order")}
                 >
                   {t`Sign in`}
-              </Button>
-
-              </Grid>
-              </div>
-              <Grid container direction='column' justify='center' margin='40px' alignContent='center'>
-
-                <button  className="GoButton">
-                  {t`Login with Google`}
-                </button>
-
-                <button className="FbButton">
-                  {t`Login with Facebook`}
-                </button>
-
-                <Typography className='registerTypo'>
-                  {t`Not registered yet?`}
+                </Button>
+                <Typography
+                  style={{ marginBottom: 50 }}>
+                  {t`Forgot your password?`}
                 </Typography>
-
-                <Button
-                  type="submit"
-                  fullWidth variant="contained"
-                  color="primary"
-                  onClick = {() => alert("Register Service temporarily out of order")}>
-                  {t`Register`}
-              </Button>
               </Grid>
-            
+            </div>
+            <Grid container direction='column' justify='center' margin='40px' alignContent='center'>
+
+              <button className="GoButton">
+                {t`Login with Google`}
+              </button>
+
+              <button className="FbButton">
+                {t`Login with Facebook`}
+              </button>
+
+              <Typography className='registerTypo'>
+                {t`Not registered yet?`}
+              </Typography>
+
+              <Button
+                type="submit"
+                fullWidth variant="contained"
+                color="primary"
+                onClick={() => alert("Register Service temporarily out of order")}>
+                {t`Register`}
+              </Button>
+            </Grid>
+
           </CardContent>
         </Card>
 

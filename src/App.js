@@ -32,8 +32,8 @@ const LanguageSwitcher = () => {
         DE
       </Button>
       <Button id="Button" variant="outlined" size="small" color="primary"
-        onClick={setLocale('sv')}>
-        SV
+        onClick={setLocale('ja')}>
+        JA
       </Button>
     </div>
   )
@@ -54,11 +54,11 @@ class App extends Component {
           </Toolbar>
         </AppBar>
         <div>
-       <Login />
-        {/* <Register/> */}
-{/* <GoolgeLogin/> */}
+          <Login />
+          {/* <Register/> */}
+          {/* <GoolgeLogin/> */}
         </div>
-       
+
       </div>
 
     );

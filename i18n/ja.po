@@ -1,79 +1,79 @@
 msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
-"Plural-Forms: nplurals = 2; plural = (n !== 1);\n"
-"Language: en\n"
+"Plural-Forms: nplurals = 1; plural = 0;\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: src/gooLogin.js:19
+msgid "Choose an account"
+msgstr "アカウントを選択"
+
+#: src/gooLogin.js:29
+msgid "Create an account"
+msgstr "アカウントを作成する"
 
 #: src/login.js:33
 #: src/register.js:21
 msgid "Login"
-msgstr "Logga in"
+msgstr "ログイン"
 
 #: src/login.js:38
 #: src/register.js:25
 msgid "Username"
-msgstr "Användarnamn"
+msgstr "ユーザー名"
 
 #: src/login.js:39
 msgid "Enter your Username"
-msgstr "Ange ditt Användarnamn"
+msgstr "ユーザー名を入力して下さい"
 
 #: src/login.js:46
 #: src/register.js:33
 msgid "Password"
-msgstr "Lösenord"
+msgstr "パスワード"
 
 #: src/login.js:48
 msgid "Enter your password"
-msgstr "Ange ditt lösenord"
+msgstr "パスワードを入力"
 
 #: src/login.js:64
 msgid "Sign in"
-msgstr "logga in"
+msgstr "パスワードを入力してください"
 
 #: src/login.js:75
 msgid "Login with Google"
-msgstr "Logger med Google"
+msgstr "Googleのログイン"
 
 #: src/login.js:79
 msgid "Login with Facebook"
-msgstr "Logger med Facebook"
+msgstr "Facebookのログイン"
 
 #: src/login.js:83
 msgid "Not registered yet?"
-msgstr "Inte registrerad ännu"
+msgstr "まだ登録されていませんか？"
 
 #: src/login.js:91
 #: src/register.js:59
 msgid "Register"
-msgstr "Registrera"
-
-#: src/gooLogin.js:19
-msgid "Choose an account"
-msgstr ""
-
-#: src/gooLogin.js:29
-msgid "Create an account"
-msgstr ""
-
-#: src/login.js:68
-msgid "Forgot your password?"
-msgstr ""
+msgstr "登録"
 
 #: src/register.js:26
 msgid "Enter a Username"
-msgstr ""
+msgstr "ユーザー名を入力"
 
 #: src/register.js:35
 msgid "Enter a password"
-msgstr ""
+msgstr "パスワードを入力します"
 
 #: src/register.js:43
 msgid "Repeat Password"
-msgstr ""
+msgstr "パスワードを繰り返す"
 
 #: src/register.js:45
 msgid "Repeat the password"
-msgstr ""
+msgstr "パスワードを繰り返す"
+
+#: src/login.js:68
+msgid "Forgot your password?"
+msgstr "パスワードを忘れた"
