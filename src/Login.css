@@ -8,10 +8,13 @@
   font-size: calc(10px + 2vmin);
   margin: auto;
   flex-wrap: wrap;
- 
 }
 
+
 .MuiButton-label-42  {
+  text-transform: initial;
+}
+.MuiButton-label-79  {
   text-transform: initial;
 }
 

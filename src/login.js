@@ -8,15 +8,48 @@ import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import { CardContent, Grid } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
 
+import { saveLocale } from './i18nInit';
 import { t } from 'ttag';
 
+import { BrowserRouter, Link, Route} from 'react-router-dom';
+import Register from './register';
 
 
 /* const isLogged = () => {
   return (console.log("Logged"))
 }
  */
+//PO works with locale = language
+const setLocale = (locale) => (ev) => {
+  ev.preventDefault();
+  saveLocale(locale);
+  window.location.reload();
+}
+
+const LanguageSwitcher = () => {
+  return (
+    <div className="Language-switch">
+
+      <Button id="Button" variant="outlined" size="small" color="primary"
+        onClick={setLocale('en')}>
+        EN
+      </Button>
+      <Button id="Button" variant="outlined" size="small" color="primary"
+        onClick={setLocale('de')}>
+        DE
+      </Button>
+      <Button id="Button" variant="outlined" size="small" color="primary"
+        onClick={setLocale('ja')}>
+        JA
+      </Button>
+    </div>
+  )
+}
+
+
 
 class Login extends Component {
   state = {
@@ -27,11 +60,19 @@ class Login extends Component {
   render() {
     return (
       <div className="loginWindow">
-        <Card className = "loginCard">
+        <Card className="loginCard" >
           <CardContent>
             <Typography>
               {t`Login`}
             </Typography>
+            <AppBar>
+              <Toolbar>
+                <div className="grow"></div>
+                <div className="languageButtons">
+                  <LanguageSwitcher />
+                </div>
+              </Toolbar>
+            </AppBar>
             <div className="box">
               <Grid container direction='column' justify='center' margin='40px' alignContent='center'>
                 <TextField className="userNameField" id="username"
@@ -63,19 +104,24 @@ class Login extends Component {
                 >
                   {t`Sign in`}
                 </Button>
-                <Typography
+                <Button
                   style={{ marginBottom: 50 }}>
                   {t`Forgot your password?`}
-                </Typography>
+                </Button>
               </Grid>
             </div>
             <Grid container direction='column' justify='center' margin='40px' alignContent='center'>
-
-              <Button className="GoButton" variant="outlined" style= {{marginBottom: 5}}>
+            
+            <BrowserRouter>
+                <Link to ="/gooLogin">
+              <Button className="GoButton" variant="outlined" style={{ marginBottom: 5 }}>
                 {t`Login with Google`}
               </Button>
+              </Link>
+              {/* <Route exact path = "/gooLogin" component = {Register}/> */}
+              </BrowserRouter>
 
-              <Button className="FbButton" variant="outlined" style= {{marginBottom: 20}}>
+              <Button className="FbButton" variant="outlined" style={{ marginBottom: 20 }}>
                 {t`Login with Facebook`}
               </Button>
 
@@ -83,13 +129,15 @@ class Login extends Component {
                 {t`Not registered yet?`}
               </Typography>
 
-              <Button
-                type="submit"
-                fullWidth variant="contained"
-                color="primary"
-                onClick={() => alert("Register Service temporarily out of order")}>
-                {t`Register`}
-              </Button>
+
+                <Button
+                  type="submit"
+                  fullWidth variant="contained"
+                  color="primary"
+                  onClick={() => alert("Register Service temporarily out of order")}>
+                  {t`Register`}
+                </Button>
+
             </Grid>
 
           </CardContent>
