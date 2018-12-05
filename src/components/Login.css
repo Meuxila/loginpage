@@ -8,8 +8,14 @@
   font-size: calc(10px + 2vmin);
   margin: auto;
   flex-wrap: wrap;
+  flex-grow: 1;
 }
-
+.loginCard{
+  min-width: 300px;
+}
+.heading {
+  text-align: center;
+}
 
 .MuiButton-label-42  {
   text-transform: initial;
@@ -21,18 +27,18 @@
  .GoButton {
    height: 30px;
    font-size: 12px;
-  
-  
    
  }
  .FbButton {
   height: 30px;
   font-size: 12px;
-
+}
+.registerTypo{
+  text-align: center;
 }
 
 
-/* @media (min-width: 1000px) and (min-height: 700px) {
+@media (min-width: 1000px) and (min-height: 700px) {
   .loginWindow{
     width: 700px;
     height: 600px;
@@ -49,4 +55,4 @@
     width: 350px;
     height: 300px;
   }
-} */
+} 

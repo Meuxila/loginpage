@@ -6,74 +6,99 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/login.js:33
-#: src/register.js:21
+#: src/components/login.js:77
 msgid "Login"
 msgstr "Login"
 
-#: src/login.js:38
-#: src/register.js:25
+#: src/components/login.js:90
+#: src/components/register.js:73
 msgid "Username"
 msgstr "Nutzername"
 
-#: src/login.js:39
+#: src/components/login.js:91
 msgid "Enter your Username"
 msgstr "Geben Sie Ihren Nutzernamen ein"
 
-#: src/login.js:46
-#: src/register.js:33
+#: src/components/login.js:98
+#: src/components/register.js:81
 msgid "Password"
 msgstr "Passwort"
 
-#: src/login.js:48
+#: src/components/login.js:100
 msgid "Enter your password"
 msgstr "Geben Sie Ihr Passwort ein"
 
-#: src/login.js:64
+#: src/components/login.js:116
 msgid "Sign in"
-msgstr "einloggen"
+msgstr "Einloggen"
 
-#: src/login.js:75
+#: src/components/login.js:127
 msgid "Login with Google"
 msgstr "Login mit Google"
 
-#: src/login.js:83
+#: src/components/login.js:135
 msgid "Not registered yet?"
 msgstr "Noch nicht registriert"
 
-#: src/login.js:91
-#: src/register.js:59
+#: src/components/login.js:142
+#: src/components/register.js:61
+#: src/components/register.js:107
 msgid "Register"
 msgstr "Register"
 
-#: src/login.js:79
+#: src/components/login.js:131
 msgid "Login with Facebook"
 msgstr "Login mit Facebook"
 
-#: src/gooLogin.js:19
+#: src/components/faceLogin.js:23
+#: src/components/gooLogin.js:23
 msgid "Choose an account"
 msgstr "Wähle einen Account"
 
-#: src/gooLogin.js:29
+#: src/components/faceLogin.js:33
+#: src/components/gooLogin.js:33
 msgid "Create an account"
 msgstr "Ein Konto erstellen"
 
-#: src/login.js:68
+#: src/components/login.js:120
 msgid "Forgot your password?"
 msgstr "Haben Sie Ihr Passwort vergessen"
 
-#: src/register.js:26
+#: src/components/register.js:74
 msgid "Enter a Username"
 msgstr "Gebe einen Benutzernamen ein"
 
-#: src/register.js:35
+#: src/components/register.js:83
 msgid "Enter a password"
 msgstr "Geben Sie ein Passwort ein"
 
-#: src/register.js:43
+#: src/components/register.js:91
 msgid "Repeat Password"
 msgstr "Wiederhole das Passwort"
 
-#: src/register.js:45
+#: src/components/register.js:93
 msgid "Repeat the password"
 msgstr "Wiederhole sie das Passwort"
+
+#: src/components/faceLogin.js:38
+#: src/components/forgotPW.js:55
+#: src/components/gooLogin.js:39
+#: src/components/register.js:113
+msgid "Back"
+msgstr "Geh zurück"
+
+#: src/components/forgotPW.js:25
+msgid "Recover the password"
+msgstr "Das Passwort wiederherstellen"
+
+#: src/components/forgotPW.js:31
+msgid "e-mail"
+msgstr "e-mail"
+
+#: src/components/forgotPW.js:32
+msgid "Enter your e-mail"
+msgstr "Geben sie ihre E-Mailadresse ein"
+
+#: src/components/forgotPW.js:47
+msgid "Send"
+msgstr "Senden"

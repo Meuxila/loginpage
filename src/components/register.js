@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './../App.css';
 import './register.css';
 
 import TextField from '@material-ui/core/TextField';
@@ -10,7 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 
-import { saveLocale } from './i18nInit';
+import { saveLocale } from '../i18nInit';
 
 
 import { t } from 'ttag';
@@ -22,6 +22,12 @@ const setLocale = (locale) => (ev) => {
 }
 
 const LanguageSwitcher = () => {
+    /*    state = {
+           username: '',
+           password: '',
+           password2: '',
+           error:''
+       } */
     return (
         <div className="Language-switch">
 
@@ -41,9 +47,11 @@ const LanguageSwitcher = () => {
     )
 }
 
-
-
 class Register extends Component {
+    backHandler = () => {
+        this.props.history.push('/')
+    }
+
     render() {
         return (
             <div className="registerWindow">
@@ -101,6 +109,9 @@ class Register extends Component {
                         </Grid>
                     </CardContent>
                 </Card>
+                <Button className="back" size="small" onClick={() => this.backHandler()}>
+                    {t`Back`}
+                </Button>
             </div >
         );
     }

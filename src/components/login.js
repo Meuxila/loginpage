@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './App.css';
+import './../App.css';
 import './Login.css';
 
 import TextField from '@material-ui/core/TextField';
@@ -11,11 +11,8 @@ import Typography from '@material-ui/core/Typography';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 
-import { saveLocale } from './i18nInit';
+import { saveLocale } from '../i18nInit';
 import { t } from 'ttag';
-
-import { BrowserRouter, Link, Route} from 'react-router-dom';
-import Register from './register';
 
 
 /* const isLogged = () => {
@@ -54,15 +51,29 @@ const LanguageSwitcher = () => {
 class Login extends Component {
   state = {
     username: '',
-    password: ''
+    password: '',
+    error:''
+  }
+
+  registerHandler = () => {
+    this.props.history.push('/register')
+  }
+  gooLoginHandler = () => {
+    this.props.history.push('/gooLogin')
+  }
+  faceLoginHandler =()=> {
+    this.props.history.push('/faceLogin')
+  }
+  passwordHandler = () => {
+    this.props.history.push('/forgotPW')
   }
 
   render() {
     return (
       <div className="loginWindow">
-        <Card className="loginCard" >
+        <Card className="loginCard">
           <CardContent>
-            <Typography>
+            <Typography className="heading">
               {t`Login`}
             </Typography>
             <AppBar>
@@ -105,38 +116,31 @@ class Login extends Component {
                   {t`Sign in`}
                 </Button>
                 <Button
-                  style={{ marginBottom: 50 }}>
+                  style={{ marginBottom: 40 }} onClick= {() => this.passwordHandler()}>
                   {t`Forgot your password?`}
                 </Button>
               </Grid>
             </div>
             <Grid container direction='column' justify='center' margin='40px' alignContent='center'>
-            
-            <BrowserRouter>
-                <Link to ="/gooLogin">
-              <Button className="GoButton" variant="outlined" style={{ marginBottom: 5 }}>
+
+              <Button className="GoButton" variant="outlined" style={{ marginBottom: 5 }} onClick={() => this.gooLoginHandler()}>
                 {t`Login with Google`}
               </Button>
-              </Link>
-              {/* <Route exact path = "/gooLogin" component = {Register}/> */}
-              </BrowserRouter>
 
-              <Button className="FbButton" variant="outlined" style={{ marginBottom: 20 }}>
+              <Button className="FbButton" variant="outlined" style={{ marginBottom: 30 }} onClick = {()=> this.faceLoginHandler()}>
                 {t`Login with Facebook`}
               </Button>
 
               <Typography className='registerTypo'>
                 {t`Not registered yet?`}
               </Typography>
-
-
-                <Button
-                  type="submit"
-                  fullWidth variant="contained"
-                  color="primary"
-                  onClick={() => alert("Register Service temporarily out of order")}>
-                  {t`Register`}
-                </Button>
+              <Button
+                type="submit"
+                fullWidth variant="contained"
+                color="primary"
+                onClick={() => this.registerHandler()}>
+                {t`Register`}
+              </Button>
 
             </Grid>
 
