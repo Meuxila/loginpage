@@ -1,5 +1,8 @@
 .loginWindow{
   background-color: #83b0ca;
+  display: flex;
+}
+.loginCard{
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -7,11 +10,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   margin: auto;
-  flex-wrap: wrap;
-  flex-grow: 1;
-}
-.loginCard{
-  min-width: 300px;
+  flex-wrap: wrap; 
 }
 .heading {
   text-align: center;
@@ -38,21 +37,16 @@
 }
 
 
-@media (min-width: 1000px) and (min-height: 700px) {
-  .loginWindow{
-    width: 700px;
-    height: 600px;
+
+
+@media only screen and (min-width: 376px)  {
+  .loginCard{
+    min-width: 30%;
   }
-}
-@media (min-width: 500px) and (min-height: 401px) {
-  .loginWindow{
-    width: 450px;
-    height: 400px;
-  }
-}
-@media (min-width: 500px) and (min-height: 400) {
-  .loginWindow{
-    width: 350px;
-    height: 300px;
+} 
+
+@media only screen and (max-width: 375px)  {
+  .loginCard{
+    min-width: 100%;
   }
 } 
