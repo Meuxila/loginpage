@@ -13,12 +13,10 @@ import Toolbar from '@material-ui/core/Toolbar';
 
 import { saveLocale } from '../i18nInit';
 import { t } from 'ttag';
+import { set } from '../cookie';
 
 
-/* const isLogged = () => {
-  return (console.log("Logged"))
-}
- */
+
 //PO works with locale = language
 const setLocale = (locale) => (ev) => {
   ev.preventDefault();
@@ -53,6 +51,16 @@ class Login extends Component {
     username: '',
     password: '',
     error:''
+  }
+
+  loginHandler =() => {
+    if (this.state.username === 'newuser' && this.state.password === 'p123456') {
+      this.props.myHandler()
+      this.props.history.push('/home')
+    }
+    else{
+      alert("Invalid username or password")
+    }
   }
 
   registerHandler = () => {
@@ -91,7 +99,7 @@ class Login extends Component {
                   placeholder={t`Enter your Username`}
                   margin="normal"
                   variant="outlined"
-                  onChange={(event, newValue) => this.setState({ username: newValue })
+                  onChange={(event) => this.setState({ username: event.target.value })
                   }
                 />
                 <TextField className="passwordField" id="passwordInput"
@@ -101,7 +109,7 @@ class Login extends Component {
                   autoComplete="current-password"
                   margin="normal"
                   variant="outlined"
-                  onChange={(event, newValue) => this.setState({ password: newValue })
+                  onChange={(event) => this.setState({ password: event.target.value })
                   }
                 />
 
@@ -110,9 +118,7 @@ class Login extends Component {
                   fullWidth variant="contained"
                   color="primary"
                   size="medium"
-
-                  onClick={() => alert("Login Service temporarily out of order")}
-                >
+                  onClick={() => this.loginHandler()}>
                   {t`Sign in`}
                 </Button>
                 <Button

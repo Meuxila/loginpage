@@ -14,6 +14,7 @@ import { saveLocale } from '../i18nInit';
 
 
 import { t } from 'ttag';
+import { jt } from 'ttag';
 
 const setLocale = (locale) => (ev) => {
     ev.preventDefault();
@@ -22,12 +23,7 @@ const setLocale = (locale) => (ev) => {
 }
 
 const LanguageSwitcher = () => {
-    /*    state = {
-           username: '',
-           password: '',
-           password2: '',
-           error:''
-       } */
+
     return (
         <div className="Language-switch">
 
@@ -48,8 +44,29 @@ const LanguageSwitcher = () => {
 }
 
 class Register extends Component {
+    state = {
+        username: '',
+        password1: '',
+        password2: '',
+        registered:'',
+        error: ''
+    }
     backHandler = () => {
         this.props.history.push('/')
+    }
+
+    registerHandler = () => {
+        if (this.state.password1.length >= 5 && this.state.password1 === this.state.password2) {
+            this.props.history.push('/')
+        this.registered = 'true'
+        }
+        else if (this.state.password1.length < 5) {
+            this.setState({ error: 'Password should be 6 or longer' })
+            alert('Password should be 6 or longer')
+        } else {
+            this.setState({ error: 'Passwords don\'t match' })
+            alert('Passwords don\'t match')
+        }
     }
 
     render() {
@@ -74,7 +91,7 @@ class Register extends Component {
                                 placeholder={t`Enter a Username`}
                                 margin="normal"
                                 variant="outlined"
-                                onChange={(event, newValue) => this.setState({ username: newValue })
+                                onChange={(event) => this.setState({ username: event.target.value })
                                 }
                             />
                             <TextField className="passwordField" id="passwordInput"
@@ -84,7 +101,7 @@ class Register extends Component {
                                 autoComplete="current-password"
                                 margin="normal"
                                 variant="outlined"
-                                onChange={(event, newValue) => this.setState({ password: newValue })
+                                onChange={(event) => this.setState({ password1: event.target.value })
                                 }
                             />
                             <TextField className="repPasswordField" id="repPasswordInput"
@@ -94,7 +111,7 @@ class Register extends Component {
                                 autoComplete="current-password"
                                 margin="normal"
                                 variant="outlined"
-                                onChange={(event, newValue) => this.setState({ password: newValue })
+                                onChange={(event) => this.setState({ password2: event.target.value })
                                 }
                             />
                             <Button className="registerButton"
@@ -102,7 +119,7 @@ class Register extends Component {
                                 fullWidth variant="contained"
                                 color="primary"
                                 size="medium"
-                                onClick={() => alert("Register Service temporarily out of order")}
+                                onClick={() => this.registerHandler()}
                             >
                                 {t`Register`}
                             </Button>
