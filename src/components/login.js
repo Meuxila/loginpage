@@ -60,6 +60,7 @@ class Login extends Component {
     }
     else{
       alert("Invalid username or password")
+      this.setState({error: 'ERROR-1' })
     }
   }
 
@@ -77,6 +78,11 @@ class Login extends Component {
   }
 
   render() {
+    let errorHtml = ''
+    switch (this.state.error) {
+      case 'ERROR-1': errorHtml = <p style={{color: 'red'}}>{t`Invalid username or password`}</p>
+                      break;
+    }
     return (
       <div className="loginWindow">
         <Card className="loginCard">
@@ -121,6 +127,7 @@ class Login extends Component {
                   onClick={() => this.loginHandler()}>
                   {t`Sign in`}
                 </Button>
+                {errorHtml}
                 <Button
                   style={{ marginBottom: 40 }} onClick= {() => this.passwordHandler()}>
                   {t`Forgot your password?`}

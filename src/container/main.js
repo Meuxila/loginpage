@@ -25,11 +25,11 @@ class Main extends Component {
         return (
             <div className="main">
                 <Switch>
-                    {this.state.registered ? <Route path="/home" exact render={(props) => <Home {...props} myHandler={this.loginHandler} />} /> : null}
+                    {this.state.registered ? <Route path="/home" exact component={Home} /> : null}
                     {!this.state.registered ? <Route path="/home" exact render={(props) => <Login {...props} myHandler={this.loginHandler} />} /> : null}
-                    {/* <Route path="/" render={(props) => <Login {...props} myHandler={this.loginHandler} />} /> */}
+                    <Route path="/" render={(props) => <Login {...props} myHandler={this.loginHandler} />} /> 
 
-                    <Route path="/" exact component={Login} />
+                    {/* <Route path="/" exact component={Login} /> */}
 
                     <Route path="/register" exact component={Register} />
                     <Route path="/gooLogin" exact component={GoogleLogin} />
