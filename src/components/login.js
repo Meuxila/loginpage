@@ -50,17 +50,19 @@ class Login extends Component {
   state = {
     username: '',
     password: '',
-    error:''
+    error: ''
   }
 
-  loginHandler =() => {
-    if (this.state.username === 'newuser' && this.state.password === 'p123456') {
+  loginHandler = () => {
+    if (this.state.username === 'newuser@gmail.com' && this.state.password === 'p123456') {
       this.props.myHandler()
       this.props.history.push('/home')
     }
-    else{
-      alert("Invalid username or password")
-      this.setState({error: 'ERROR-1' })
+    else if(this.state.username !== 'newuser@gmail.com'){
+      /*   alert("Invalid username or password") */
+      this.setState({ error: 'ERROR-1' })
+    } else if (this.state.password !== 'p123456' ){
+      this.setState({error : 'ERROR-2'})
     }
   }
 
@@ -70,7 +72,7 @@ class Login extends Component {
   gooLoginHandler = () => {
     this.props.history.push('/gooLogin')
   }
-  faceLoginHandler =()=> {
+  faceLoginHandler = () => {
     this.props.history.push('/faceLogin')
   }
   passwordHandler = () => {
@@ -80,8 +82,12 @@ class Login extends Component {
   render() {
     let errorHtml = ''
     switch (this.state.error) {
-      case 'ERROR-1': errorHtml = <p style={{color: 'red'}}>{t`Invalid username or password`}</p>
-                      break;
+      case 'ERROR-1':
+        errorHtml = <p id= 'errorMessage'>{t`Invalid username`}</p>
+        break;
+        case 'ERROR-2':
+        errorHtml = <p id= 'errorMessage'>{t`Invalid password`}</p>
+        break;
     }
     return (
       <div className="loginWindow">
@@ -129,7 +135,7 @@ class Login extends Component {
                 </Button>
                 {errorHtml}
                 <Button
-                  style={{ marginBottom: 40 }} onClick= {() => this.passwordHandler()}>
+                  style={{ marginBottom: 40 }} onClick={() => this.passwordHandler()}>
                   {t`Forgot your password?`}
                 </Button>
               </Grid>
@@ -140,7 +146,7 @@ class Login extends Component {
                 {t`Login with Google`}
               </Button>
 
-              <Button className="FbButton" variant="outlined" style={{ marginBottom: 30 }} onClick = {()=> this.faceLoginHandler()}>
+              <Button className="FbButton" variant="outlined" style={{ marginBottom: 30 }} onClick={() => this.faceLoginHandler()}>
                 {t`Login with Facebook`}
               </Button>
 

@@ -9,6 +9,11 @@
   margin: auto;
   text-align: center;
   }
+  #errorMessage {
+    color: red;
+    text-align: center;
+    font-size: small;
+  }
 
   @media (min-width: 1000px) and (min-height: 700px) {
     .registerWindow{

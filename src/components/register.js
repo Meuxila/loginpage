@@ -48,7 +48,7 @@ class Register extends Component {
         username: '',
         password1: '',
         password2: '',
-        registered:'',
+        registered: '',
         error: ''
     }
     backHandler = () => {
@@ -58,18 +58,28 @@ class Register extends Component {
     registerHandler = () => {
         if (this.state.password1.length >= 5 && this.state.password1 === this.state.password2) {
             this.props.history.push('/')
-        this.registered = 'true'
+            this.registered = 'true'
         }
         else if (this.state.password1.length < 5) {
-            this.setState({ error: 'Password should be 6 or longer' })
-            alert('Password should be 6 or longer')
+            this.setState({ error: 'ERROR-1' })
+            // alert('Password should be 6 or longer')
         } else {
-            this.setState({ error: 'Passwords don\'t match' })
-            alert('Passwords don\'t match')
+            this.setState({ error: 'ERROR-2' })
+            // alert('Passwords don\'t match')
         }
     }
 
     render() {
+        let errorHtml = ''
+        switch (this.state.error) {
+            case 'ERROR-1':
+                errorHtml= <p id= 'errorMessage'>{t`Password should be 6 or longer`}</p>
+                break;
+            case 'ERROR-2':
+             errorHtml = <p id= 'errorMessage'>{t`Passwords don\'t match`}</p>
+                break;
+        }
+
         return (
             <div className="registerWindow">
                 <Card>
@@ -123,6 +133,7 @@ class Register extends Component {
                             >
                                 {t`Register`}
                             </Button>
+                            {errorHtml}
                         </Grid>
                     </CardContent>
                 </Card>
