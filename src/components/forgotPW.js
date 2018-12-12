@@ -29,7 +29,7 @@ class ForgotPW extends Component {
                             <Grid container direction='column' justify='center' margin='40px' alignContent='center'>
                                 <TextField className="mailField" id="mail"
                                     label={t`e-mail`}
-                                    placeholder={t`Enter your e-mail`}
+                                    placeholder= {t`Enter your e-mail`}
                                     margin="normal"
                                     variant="outlined"
                                     onChange={(event, newValue) => this.setState({ username: newValue })

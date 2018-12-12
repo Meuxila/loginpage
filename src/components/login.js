@@ -86,7 +86,7 @@ class Login extends Component {
         errorHtml = <p id= 'errorMessage'>{t`Invalid username`}</p>
         break;
         case 'ERROR-2':
-        errorHtml = <p id= 'errorMessage'>{t`Invalid password`}</p>
+        errorHtml = <p id= 'errorMessage'>{t`The password is incorrect`}</p>
         break;
     }
     return (
@@ -130,7 +130,9 @@ class Login extends Component {
                   fullWidth variant="contained"
                   color="primary"
                   size="medium"
-                  onClick={() => this.loginHandler()}>
+                  onClick={() => this.loginHandler()}
+                  onKeyPress= {() => this.loginHandler()}
+                  >
                   {t`Sign in`}
                 </Button>
                 {errorHtml}

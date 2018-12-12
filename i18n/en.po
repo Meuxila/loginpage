@@ -6,47 +6,47 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/components/login.js:91
+#: src/components/login.js:97
 msgid "Login"
 msgstr "Login"
 
-#: src/components/login.js:104
-#: src/components/register.js:90
+#: src/components/login.js:110
+#: src/components/register.js:100
 msgid "Username"
 msgstr "Username"
 
-#: src/components/login.js:105
+#: src/components/login.js:111
 msgid "Enter your Username"
 msgstr "Enter your Username"
 
-#: src/components/login.js:112
-#: src/components/register.js:98
+#: src/components/login.js:118
+#: src/components/register.js:108
 msgid "Password"
 msgstr "Password"
 
-#: src/components/login.js:114
+#: src/components/login.js:120
 msgid "Enter your password"
 msgstr "Enter your password"
 
-#: src/components/login.js:128
+#: src/components/login.js:134
 msgid "Sign in"
 msgstr "Sign in"
 
-#: src/components/login.js:140
+#: src/components/login.js:146
 msgid "Login with Google"
 msgstr "Login with Google"
 
-#: src/components/login.js:144
+#: src/components/login.js:150
 msgid "Login with Facebook"
 msgstr "Login with Facebook"
 
-#: src/components/login.js:148
+#: src/components/login.js:154
 msgid "Not registered yet?"
 msgstr "Not registered yet?"
 
-#: src/components/login.js:155
-#: src/components/register.js:78
-#: src/components/register.js:124
+#: src/components/login.js:161
+#: src/components/register.js:88
+#: src/components/register.js:134
 msgid "Register"
 msgstr "Register"
 
@@ -60,32 +60,32 @@ msgstr "Choose an account"
 msgid "Create an account"
 msgstr "Create an account"
 
-#: src/components/login.js:133
+#: src/components/login.js:139
 msgid "Forgot your password?"
 msgstr "Forgot your password?"
 
-#: src/components/register.js:91
+#: src/components/register.js:101
 msgid "Enter a Username"
 msgstr "Enter a Username"
 
-#: src/components/register.js:100
+#: src/components/register.js:110
 msgid "Enter a password"
 msgstr "Enter a password"
 
-#: src/components/register.js:108
+#: src/components/register.js:118
 msgid "Repeat Password"
 msgstr "Repeat Password"
 
-#: src/components/register.js:110
+#: src/components/register.js:120
 msgid "Repeat the password"
 msgstr "Repeat the password"
 
 #: src/components/faceLogin.js:38
 #: src/components/forgotPW.js:55
 #: src/components/gooLogin.js:39
-#: src/components/register.js:130
+#: src/components/register.js:141
 msgid "Back"
-msgstr ""
+msgstr "Back"
 
 #: src/components/forgotPW.js:25
 msgid "Recover the password"
@@ -93,20 +93,28 @@ msgstr "Back"
 
 #: src/components/forgotPW.js:31
 msgid "e-mail"
-msgstr ""
+msgstr "e-mail"
 
 #: src/components/forgotPW.js:32
 msgid "Enter your e-mail"
-msgstr ""
-"Enter your e-mail\n"
-"\n"
-"#: src/components/forgotPW.js:47\n"
-"msgid "
+msgstr "Enter your e-mail"
 
 #: src/components/forgotPW.js:47
 msgid "Send"
 msgstr "Send"
 
-#: src/components/login.js:83
-msgid "Invalid username or password"
-msgstr "Invalid username or password"
+#: src/components/login.js:86
+msgid "Invalid username"
+msgstr "Invalid username"
+
+#: src/components/register.js:76
+msgid "Password should be 6 or longer"
+msgstr "Password shouls be 6 or longer"
+
+#: src/components/register.js:79
+msgid "Passwords don\'t match"
+msgstr "Passwords don\'t match"
+
+#: src/components/login.js:89
+msgid "The password is incorrect"
+msgstr "The password is incorrect"
