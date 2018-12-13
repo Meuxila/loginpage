@@ -131,7 +131,7 @@ class Login extends Component {
                   color="primary"
                   size="medium"
                   onClick={() => this.loginHandler()}
-                  onKeyPress= {() => this.loginHandler()}
+
                   >
                   {t`Sign in`}
                 </Button>
