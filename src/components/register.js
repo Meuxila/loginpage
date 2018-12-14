@@ -54,7 +54,21 @@ class Register extends Component {
     backHandler = () => {
         this.props.history.push('/')
     }
+    validateEmail = () => {
+        let email = document.getElementById('username')
+        let filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
+        if (!filter.test(email.value)) {
+            alert('Please enter a valid email address');
+            return false;
+        }
+        else {
+            alert ('You got it!');
+            this.registerHandler();
+            // this.setState({ username: event.target.email });
+            return true;
+        }
+    }
     registerHandler = () => {
         if (this.state.password1.length >= 5 && this.state.password1 === this.state.password2) {
             this.props.history.push('/')
@@ -129,7 +143,7 @@ class Register extends Component {
                                 fullWidth variant="contained"
                                 color="primary"
                                 size="medium"
-                                onClick={() => this.registerHandler()}
+                                onClick={() => this.validateEmail()}
                             >
                                 {t`Register`}
                             </Button>
