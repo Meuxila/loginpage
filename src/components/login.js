@@ -88,7 +88,10 @@ class Login extends Component {
         case 'ERROR-2':
         errorHtml = <p id= 'errorMessage'>{t`The password is incorrect`}</p>
         break;
+        default:
+        break;
     }
+    
     return (
       <div className="loginWindow">
         <Card className="loginCard">

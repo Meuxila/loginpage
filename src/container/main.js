@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { NavLink, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import './main.css';
 
 import Login from './../components/login';

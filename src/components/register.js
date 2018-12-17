@@ -14,7 +14,6 @@ import { saveLocale } from '../i18nInit';
 
 
 import { t } from 'ttag';
-import { jt } from 'ttag';
 
 const setLocale = (locale) => (ev) => {
     ev.preventDefault();
@@ -59,38 +58,59 @@ class Register extends Component {
         let filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
         if (!filter.test(email.value)) {
-            alert('Please enter a valid email address');
+            this.setState({ error: 'ERROR-3' })
             return false;
         }
         else {
-            alert ('You got it!');
-            this.registerHandler();
+            this.validatePassword();
             // this.setState({ username: event.target.email });
             return true;
         }
     }
-    registerHandler = () => {
+    validatePassword = () => {
         if (this.state.password1.length >= 5 && this.state.password1 === this.state.password2) {
-            this.props.history.push('/')
             this.registered = 'true'
+            console.log('Your password is fine!')
+            return true;
         }
         else if (this.state.password1.length < 5) {
             this.setState({ error: 'ERROR-1' })
-            // alert('Password should be 6 or longer')
+            return false;
+            // console.log ('Password should be 6 or longer')
         } else {
             this.setState({ error: 'ERROR-2' })
-            // alert('Passwords don\'t match')
+            return false;
+            // console.log ('Passwords don\'t match')
         }
+
+    }
+    registerHandler = () => {
+        if (this.validateEmail() && this.validatePassword()) {
+            // this.setState(username)
+            this.props.history.push('/')
+            console.log('Now you are registered')
+            return true;
+        } else {
+            this.props.history.push('/register')
+            console.log('Something went wrong with the email or the password')
+        }
+
     }
 
     render() {
         let errorHtml = ''
         switch (this.state.error) {
             case 'ERROR-1':
-                errorHtml= <p id= 'errorMessage'>{t`Password should be 6 or longer`}</p>
+                errorHtml = <p id='errorMessage'>{t`Password should be 6 or longer`}</p>
                 break;
             case 'ERROR-2':
-             errorHtml = <p id= 'errorMessage'>{t`Passwords don\'t match`}</p>
+                errorHtml = <p id='errorMessage'>{t`Passwords don\'t match`}</p>
+                break;
+            case 'ERROR-3':
+                errorHtml = <p id='errorMessage'>{t`Please enter a valid email address`}</p>
+                break;
+            default:
+                // errorHtml = <p id='errorMessage'>{t`There was an error, please try it again`}</p>
                 break;
         }
 
@@ -143,7 +163,7 @@ class Register extends Component {
                                 fullWidth variant="contained"
                                 color="primary"
                                 size="medium"
-                                onClick={() => this.validateEmail()}
+                                onClick={() => this.registerHandler()}
                             >
                                 {t`Register`}
                             </Button>

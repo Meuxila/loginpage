@@ -1,8 +1,8 @@
 .loginWindow{
   background-color: #83b0ca;
   display: flex;
-  
 }
+
 .loginCard{
   min-height: 100vh;
   align-items: center;
@@ -21,7 +21,7 @@
 .MuiButton-label-79  {
   text-transform: initial;
 }
-
+ 
  .GoButton {
    height: 30px;
    font-size: 12px;
