@@ -62,7 +62,6 @@ class Register extends Component {
             return false;
         }
         else {
-            this.validatePassword();
             // this.setState({ username: event.target.email });
             return true;
         }
@@ -87,9 +86,9 @@ class Register extends Component {
     registerHandler = () => {
         if (this.validateEmail() && this.validatePassword()) {
             // this.setState(username)
-            this.props.history.push('/')
             console.log('Now you are registered')
-            return true;
+            this.props.history.push('/')
+            
         } else {
             this.props.history.push('/register')
             console.log('Something went wrong with the email or the password')
