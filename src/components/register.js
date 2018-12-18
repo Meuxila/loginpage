@@ -79,7 +79,7 @@ class Register extends Component {
         } else {
             this.setState({ error: 'ERROR-2' })
             return false;
-            // console.log ('Passwords don\'t match')
+            // console.log ('Passwords don't match')
         }
 
     }
@@ -103,7 +103,7 @@ class Register extends Component {
                 errorHtml = <p id='errorMessage'>{t`Password should be 6 or longer`}</p>
                 break;
             case 'ERROR-2':
-                errorHtml = <p id='errorMessage'>{t`Passwords don\'t match`}</p>
+                errorHtml = <p id='errorMessage'>{t`Passwords do not match`}</p>
                 break;
             case 'ERROR-3':
                 errorHtml = <p id='errorMessage'>{t`Please enter a valid email address`}</p>

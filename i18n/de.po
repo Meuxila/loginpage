@@ -6,47 +6,47 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/components/login.js:97
+#: src/components/login.js:100
 msgid "Login"
 msgstr "Login"
 
-#: src/components/login.js:110
-#: src/components/register.js:100
+#: src/components/login.js:113
+#: src/components/register.js:133
 msgid "Username"
 msgstr "Nutzername"
 
-#: src/components/login.js:111
+#: src/components/login.js:114
 msgid "Enter your Username"
 msgstr "Geben Sie Ihren Nutzernamen ein"
 
-#: src/components/login.js:118
-#: src/components/register.js:108
+#: src/components/login.js:121
+#: src/components/register.js:141
 msgid "Password"
 msgstr "Passwort"
 
-#: src/components/login.js:120
+#: src/components/login.js:123
 msgid "Enter your password"
 msgstr "Geben Sie Ihr Passwort ein"
 
-#: src/components/login.js:134
+#: src/components/login.js:139
 msgid "Sign in"
 msgstr "Einloggen"
 
-#: src/components/login.js:146
+#: src/components/login.js:151
 msgid "Login with Google"
 msgstr "Login mit Google"
 
-#: src/components/login.js:154
+#: src/components/login.js:159
 msgid "Not registered yet?"
 msgstr "Noch nicht registriert"
 
-#: src/components/login.js:161
-#: src/components/register.js:88
-#: src/components/register.js:134
+#: src/components/login.js:166
+#: src/components/register.js:121
+#: src/components/register.js:167
 msgid "Register"
 msgstr "Register"
 
-#: src/components/login.js:150
+#: src/components/login.js:155
 msgid "Login with Facebook"
 msgstr "Login mit Facebook"
 
@@ -60,30 +60,30 @@ msgstr "Wähle einen Account"
 msgid "Create an account"
 msgstr "Ein Konto erstellen"
 
-#: src/components/login.js:139
+#: src/components/login.js:144
 msgid "Forgot your password?"
 msgstr "Haben Sie Ihr Passwort vergessen"
 
-#: src/components/register.js:101
+#: src/components/register.js:134
 msgid "Enter a Username"
 msgstr "Gebe einen Benutzernamen ein"
 
-#: src/components/register.js:110
+#: src/components/register.js:143
 msgid "Enter a password"
 msgstr "Geben Sie ein Passwort ein"
 
-#: src/components/register.js:118
+#: src/components/register.js:151
 msgid "Repeat Password"
 msgstr "Wiederhole das Passwort"
 
-#: src/components/register.js:120
+#: src/components/register.js:153
 msgid "Repeat the password"
 msgstr "Wiederhole sie das Passwort"
 
 #: src/components/faceLogin.js:38
 #: src/components/forgotPW.js:55
 #: src/components/gooLogin.js:39
-#: src/components/register.js:141
+#: src/components/register.js:174
 msgid "Back"
 msgstr "Geh zurück"
 
@@ -111,10 +111,14 @@ msgstr "Ungültiger benutzername"
 msgid "The password is incorrect"
 msgstr "Das Passwort ist inkorrekt"
 
-#: src/components/register.js:76
+#: src/components/register.js:103
 msgid "Password should be 6 or longer"
 msgstr "Das Passwort sollte mindestens 6 sein"
 
-#: src/components/register.js:79
-msgid "Passwords don\'t match"
+#: src/components/register.js:109
+msgid "Please enter a valid email address"
+msgstr "Bitte geben Sie eine gültige E-Mail-Adresse ein"
+
+#: src/components/register.js:106
+msgid "Passwords do not match"
 msgstr "Passwörter stimmen nicht überein"

@@ -16,74 +16,74 @@ msgstr "アカウントを選択"
 msgid "Create an account"
 msgstr "アカウントを作成する"
 
-#: src/components/login.js:97
+#: src/components/login.js:100
 msgid "Login"
 msgstr "ログイン"
 
-#: src/components/login.js:110
-#: src/components/register.js:100
+#: src/components/login.js:113
+#: src/components/register.js:133
 msgid "Username"
 msgstr "ユーザー名"
 
-#: src/components/login.js:111
+#: src/components/login.js:114
 msgid "Enter your Username"
 msgstr "ユーザー名を入力して下さい"
 
-#: src/components/login.js:118
-#: src/components/register.js:108
+#: src/components/login.js:121
+#: src/components/register.js:141
 msgid "Password"
 msgstr "パスワード"
 
-#: src/components/login.js:120
+#: src/components/login.js:123
 msgid "Enter your password"
 msgstr "パスワードを入力"
 
-#: src/components/login.js:134
+#: src/components/login.js:139
 msgid "Sign in"
 msgstr "パスワードを入力してください"
 
-#: src/components/login.js:146
+#: src/components/login.js:151
 msgid "Login with Google"
 msgstr "Googleのログイン"
 
-#: src/components/login.js:150
+#: src/components/login.js:155
 msgid "Login with Facebook"
 msgstr "Facebookのログイン"
 
-#: src/components/login.js:154
+#: src/components/login.js:159
 msgid "Not registered yet?"
 msgstr "まだ登録されていませんか？"
 
-#: src/components/login.js:161
-#: src/components/register.js:88
-#: src/components/register.js:134
+#: src/components/login.js:166
+#: src/components/register.js:121
+#: src/components/register.js:167
 msgid "Register"
 msgstr "登録"
 
-#: src/components/register.js:101
+#: src/components/register.js:134
 msgid "Enter a Username"
 msgstr "ユーザー名を入力"
 
-#: src/components/register.js:110
+#: src/components/register.js:143
 msgid "Enter a password"
 msgstr "パスワードを入力します"
 
-#: src/components/register.js:118
+#: src/components/register.js:151
 msgid "Repeat Password"
 msgstr "パスワードを繰り返す"
 
-#: src/components/register.js:120
+#: src/components/register.js:153
 msgid "Repeat the password"
 msgstr "パスワードを繰り返す"
 
-#: src/components/login.js:139
+#: src/components/login.js:144
 msgid "Forgot your password?"
 msgstr "パスワードを忘れた"
 
 #: src/components/faceLogin.js:38
 #: src/components/forgotPW.js:55
 #: src/components/gooLogin.js:39
-#: src/components/register.js:141
+#: src/components/register.js:174
 msgid "Back"
 msgstr "戻る"
 
@@ -111,10 +111,14 @@ msgstr "無効なユーザー名"
 msgid "The password is incorrect"
 msgstr "パスワードが間違っています"
 
-#: src/components/register.js:76
+#: src/components/register.js:103
 msgid "Password should be 6 or longer"
 msgstr "パスワードは6以上にする必要があります"
 
-#: src/components/register.js:79
-msgid "Passwords don\'t match"
+#: src/components/register.js:109
+msgid "Please enter a valid email address"
+msgstr "有効なメールアドレスを入力してください"
+
+#: src/components/register.js:106
+msgid "Passwords do not match"
 msgstr "パスワードが一致しません"
